@@ -8,19 +8,17 @@ $APPLICATION->SetTitle("Наука из первых рук");
 
 <? //pp(isBot()); ?>
 
-<? $APPLICATION->IncludeComponent(
-    "scfh:content.slider",
-    "",
-    Array(
-        "COMPONENT_TEMPLATE" => ".default",
-        "IBLOCK_TYPE" => "content",
-        "IBLOCK_ID" => "",
-        "ITEMS_LIMIT" => "5",
-        "CACHE_TYPE" => "A",
-        "CACHE_TIME" => "3600",
-        "TYPE" => "all",
-        "STYLE" => "huge"
-    )
+<? $APPLICATION->IncludeComponent("scfh:content.slider", "template1", Array(
+	"COMPONENT_TEMPLATE" => ".default",
+		"IBLOCK_TYPE" => "content",	// IBLOCK_TYPE
+		"IBLOCK_ID" => "",	// IBLOCK_ID
+		"ITEMS_LIMIT" => "5",	// ITEMS_LIMIT
+		"CACHE_TYPE" => "A",	// Тип кеширования
+		"CACHE_TIME" => "3600",	// Время кеширования (сек.)
+		"TYPE" => "all",
+		"STYLE" => "huge"
+	),
+	false
 ); ?><? $APPLICATION->IncludeComponent(
     "bitrix:menu",
     "scfh_section_menu",
